@@ -13,7 +13,8 @@ for(let i = 0; i < productList.length; i++)
 	// create card element
 	temp_card = document.createElement("div");
 	temp_card.classList.add("card", "row");
-	temp_card.id = "clothing_" + productList[i]["id"];
+	if(productList[i]["isAccessory"]) temp_card.id = "accessories_" + productList[i]["id"];
+	else temp_card.id = "clothing_" + productList[i]["id"];
 
 	// card link - a
 	temp_element = document.createElement("a");
